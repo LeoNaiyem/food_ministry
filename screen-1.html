@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DG Food</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navigation {
+        background-color: #5bb600;
+      }
+      .logo {
+        width: 80px;
+        height: auto;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+      .marquee {
+        width: 80%;
+        height: 20px;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+      }
+      .marquee p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: 20px;
+        font-size: 12px;
+        text-align: center;
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -moz-animation: scroll-left 20s linear infinite;
+        -webkit-animation: scroll-left 20s linear infinite;
+        animation: scroll-left 20s linear infinite;
+      }
+      /* .time-icons {
+        top: 5px;
+        right: 115px;
+      } */
+      .accessability-icon {
+        width: 60px;
+        height: 60px;
+        top: 80vh;
+        right: 20px;
+        cursor: pointer;
+        z-index: 999999;
+        transition: all 0.5s ease;
+      }
+      .accessability-icon:hover {
+        transform: rotate(360deg);
+      }
+      .portals-left {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+        height: 150px;
+        width: 40%;
+        padding-left: 6rem;
+        background-color: #5bb600;
+      }
+      .portals-right {
+        width: 70%;
+      }
+      .portal-cards {
+        margin-left: -130px;
+      }
+      @-moz-keyframes scroll-left {
+        0% {
+          -moz-transform: translateX(100%);
+        }
+        100% {
+          -moz-transform: translateX(-100%);
+        }
+      }
+      @-webkit-keyframes scroll-left {
+        0% {
+          -webkit-transform: translateX(100%);
+        }
+        100% {
+          -webkit-transform: translateX(-100%);
+        }
+      }
+      @keyframes scroll-left {
+        0% {
+          -moz-transform: translateX(100%);
+          -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+        }
+        100% {
+          -moz-transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="home" class="pb-5">
+      <!-- top header -->
+      <div class="bg-dark">
+        <div
+          class="top-header py-2 px-3 container d-flex justify-content-between align-items-center"
+        >
+          <div class="top-header-left d-flex">
+            <div class="top-header-icons hstack gap-2 d-flex">
+              <div class="icon bg-primary">
+                <a href="#">
+                  <i class="bi text-light bi-facebook"></i>
+                </a>
+              </div>
+              <div class="icon bg-info">
+                <a href="#">
+                  <i class="bi text-light bi-twitter"></i>
+                </a>
+              </div>
+              <div class="icon bg-danger">
+                <a href="#">
+                  <i class="bi text-light bi-youtube"></i>
+                </a>
+              </div>
+              <div class="top-header-dat text-light">
+                <span class="mx-1">Thursday, 14 April, 2022 </span>
+                <span><i class="bi bi-clock-fill mx-1"></i> 13:13:04 BST</span>
+              </div>
+            </div>
+          </div>
+          <div class="top-header-right d-flex">
+            <a href="#">Skip to Main Content ></a>
+            <i class="bi bi-person-fill text-light mx-1 px-1 fs-5"></i>
+            <i class="bi text-light bi-translate px-1"></i>
+            <span class="text-light">বাংলা</span>
+          </div>
+        </div>
+      </div>
+      <header class="navigation">
+        <nav class="navbar navbar-dark container">
+          <div class="container-fluid ps-0">
+            <div class="logo">
+              <a
+                class="p-0 m-0 navbar-brand d-flex align-items-center"
+                href="/home"
+              >
+                <img src="/assets/images/logo.png" alt="logo" />
+                <span style="margin-left: -15px">খাদ্য বাতায়ন</span>
+              </a>
+            </div>
+
+            <div class="nav-right d-flex align-items-center">
+              <div
+                class="nav-icons text-light border-start border-end border-light px-3"
+              >
+                <i class="bi bi-card-text fs-5 px-1"></i>
+                <i class="bi bi-bell fs-5 px-1"></i>
+              </div>
+              <div class="search-login px-3">
+                <i class="bi bi-search me-2 fs-5 text-light"></i>
+                <button style="background: #386801" class="btn text-light">
+                  <i class="bi bi-person-fill"></i>
+                  login
+                </button>
+              </div>
+              <button
+                class="navbar-toggler px-1"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div
+              class="offcanvas offcanvas-end text-bg-dark"
+              tabindex="-1"
+              id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                  Dark offcanvas
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-dark active"
+                      aria-current="page"
+                      href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link text-dark dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="carousel-container">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                style="height: 70vh; object-fit: cover"
+                src="/assets/images/1.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                style="height: 70vh; object-fit: cover"
+                src="/assets/images/2.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                style="height: 70vh; object-fit: cover"
+                src="/assets/images/3.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev text-light p-2"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-success rounded-circle"
+              style="background-size: 18px"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-success rounded-circle"
+              style="background-size: 18px"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div
+        style="background-color: #346602"
+        class="text-light position-relative"
+      >
+        <div class="container d-flex">
+          <div
+            class="d-flex align-items-center"
+            style="background-color: #87c452"
+          >
+            <i class="bi bi-card-text fs-5 px-3"></i>
+          </div>
+          <div class="w-100 py-2">
+            <div
+              class="marquee d-flex align-items-center border-end border-light"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+                repellat fugiat quo alias facilis necessitatibus. Minima officia
+                nobis at, possimus itaque nemo et vitae quod nihil quo quaerat
+                natus ut eos reprehenderit sequi expedita sed dignissimos
+                explicabo consectetur doloremque veritatis blanditiis fugit
+                molestias incidunt! Eos esse ad odio maiores ullam harum
+                repellat earum libero? Labore eius voluptates sed impedit illum
+                excepturi nobis! Enim autem tempora minus modi natus commodi
+                repudiandae totam facere vitae, similique rem neque soluta
+                delectus reprehenderit asperiores quia consectetur placeat eos
+                maiores amet odit ad molestias nihil. Nobis amet dolore
+                consectetur ipsam, tempora quo quidem expedita inventore. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Magni
+                repellat fugiat quo alias facilis necessitatibus. Minima officia
+                nobis at, possimus itaque nemo et vitae quod nihil quo quaerat
+                natus ut eos reprehenderit sequi expedita sed dignissimos
+                explicabo consectetur doloremque veritatis blanditiis fugit
+                molestias incidunt! Eos esse ad odio maiores ullam harum
+                repellat earum libero? Labore eius voluptates sed impedit illum
+                excepturi nobis! Enim autem tempora minus modi natus commodi
+                repudiandae totam facere vitae, similique rem neque soluta
+                delectus reprehenderit asperiores quia consectetur placeat eos
+                maiores amet odit ad molestias nihil. Nobis amet dolore
+                consectetur ipsam, tempora quo quidem expedita inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="d-flex position-absolute time-icons">
+          <span>23 November, 2022</span>
+          <div>pre</div>
+          <div>next</div>
+        </div> -->
+      </div>
+      <div
+        class="accessability-icon position-fixed bg-success rounded-circle p-3 text-light d-flex justify-content-center align-items-center"
+      >
+        <i class="bi bi-universal-access-circle fs-3"></i>
+      </div>
+      <div class="portals d-flex justify-content-center align-items-center">
+        <div class="portals-left d-flex align-items-center">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="logo" srcset="" />
+          </div>
+          <div style="margin-left: -10px" class="text-light fs-5 lh-1">
+            <span>Our</span><br />
+            <span class="fw-bold">Portals</span>
+          </div>
+        </div>
+        <div class="portals-right">
+          <div class="gap-3 d-flex w-100 overflow-hidden portal-cards">
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-person fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">Dealer</h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-person fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">Miller</h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-credit-card fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">
+                  Cradit <br />
+                  Coustomer
+                </h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-person-square fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">
+                  Other Piority <br />
+                  Coustomer
+                </h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-truck fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">
+                  Movment <br />
+                  Constactor
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JavaScript CDN-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

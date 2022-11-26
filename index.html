@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/accessablitiy/css/style.css" />
+    <link rel="stylesheet" href="/accessablitiy/scss/index.css.map" />
+    <link rel="stylesheet" href="/accessablitiy/css/accessibility.css" />
+    <link rel="stylesheet" href="/accessablitiy/css/accessibility2.css" />
+    <link rel="stylesheet" href="/accessablitiy/css/asb.css" />
+    <link rel="stylesheet" href="/accessablitiy/scss/_mixnis.css" />
+    <link rel="stylesheet" href="/accessablitiy/scss/_variables.css" />
+    <link rel="stylesheet" href="/accessablitiy/scss/accessibilities.css" />
+    <link rel="stylesheet" href="/accessablitiy/scss/markerLine.css" />
+    <link rel="stylesheet" href="/accessablitiy/scss/readingLine.css" />
+    <script src="/accessablitiy/js/index.js"></script>
+    <script src="/accessablitiy/js/asb.js"></script>
+    <script
+      type="text/javascript"
+      src="/accessablitiy/js/jquery-accessibleMegaMenu.js"
+    ></script>
+    <script>
+      document.addEventListener("keyup", (event) => {
+        //var name = event.key; //var code = event.code;
+        if (event.code === "Tab") {
+          var k = 0;
+          if (event.shiftKey) {
+            //shift+tab pressed//Code // console.log(event.target);
+            var activeElement = document.activeElement;
+            if (activeElement.tagName.toLowerCase() == "button") {
+              if (activeElement.title === "Download Screen Reader") {
+                $("#myModalClose").attr("id", "myModal");
+                $("#myModal").modal();
+                return false;
+              }
+            }
+          } else {
+            //only tab pressed //Code
+          }
+        }
+      });
+
+      //====================//
+      // Add event listener on keydown
+      var access = 0;
+      if (access === 0) {
+        document.addEventListener("keyup", (event) => {
+          var name = event.key;
+          var code = event.code;
+          var i = 0;
+          if (code == "Tab" && i == 0) {
+            $("#myModal").modal();
+            i = i + 1;
+          }
+          // Alert the key name and key code on keydown
+        });
+        var accessibilitypop = document.querySelector("#accessibilitypop");
+        function accessibility() {
+          $("#myModal").modal("hide");
+          document.getElementById("universalAccessBtn").click();
+          $("#myModal").attr("id", "myModalClose");
+          //$('#accessibilityBar').attr('class', 'active');
+          $("#myModal").attr("tabindex", "");
+          document.getElementById("universalAccessBtn").focus();
+          $("#accessibilityBar").attr("role", "dialog");
+          $("#universalAccessBtn").attr("tabindex", "1");
+        }
+
+        function accessibilitySkipToMainContent() {
+          $("#myModal").attr("tabindex", "");
+          $("#myModal").attr("id", "myModalClose");
+          $("#notice-board-bg").attr({ "aria-selected": true, tabindex: 0 });
+          //$('#skip-main-content-start-here').attr({'aria-selected': true, 'tabindex': '-1'});
+          document.getElementById("skip-main-content-start-here").focus();
+        }
+
+        function accessibilitymodelClose() {
+          //$('#notice-board-bg').attr('tabindex', '0');
+          $("#skip-main-content-start-here").attr("tabindex", "0");
+          $("#myModal").attr("tabindex", "");
+          $("#myModal").attr("id", "myModalClose");
+        }
+      }
+      function start_np() {
+        $("#start-np").attr({ "aria-selected": true, tabindex: 0 });
+        document.getElementById("start-np").focus();
+      }
+    </script>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navigation {
+        background-color: #5bb600;
+      }
+      .logo {
+        width: 80px;
+        height: auto;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+      .marquee {
+        width: 80%;
+        height: 20px;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+      }
+      .marquee p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: 20px;
+        font-size: 12px;
+        text-align: center;
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -moz-animation: scroll-left 20s linear infinite;
+        -webkit-animation: scroll-left 20s linear infinite;
+        animation: scroll-left 20s linear infinite;
+      }
+      /* .time-icons {
+        top: 5px;
+        right: 115px;
+      } */
+      .accessability-icon {
+        width: 60px;
+        height: 60px;
+        top: 80vh;
+        right: 20px;
+        cursor: pointer;
+        z-index: 999999;
+        transition: all 0.5s ease;
+      }
+      .accessability-icon:hover {
+        transform: rotate(360deg);
+      }
+      .portals-left {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+        height: 150px;
+        width: 40%;
+        padding-left: 6rem;
+        background-color: #5bb600;
+      }
+      .portals-right {
+        width: 70%;
+      }
+      .portal-cards {
+        margin-left: -130px;
+      }
+      @-moz-keyframes scroll-left {
+        0% {
+          -moz-transform: translateX(100%);
+        }
+        100% {
+          -moz-transform: translateX(-100%);
+        }
+      }
+      @-webkit-keyframes scroll-left {
+        0% {
+          -webkit-transform: translateX(100%);
+        }
+        100% {
+          -webkit-transform: translateX(-100%);
+        }
+      }
+      @keyframes scroll-left {
+        0% {
+          -moz-transform: translateX(100%);
+          -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+        }
+        100% {
+          -moz-transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+        }
+      }
+      svg:not(:root).svg-inline--fa {
+        overflow: visible;
+      }
+      .svg-inline--fa {
+        display: inline-block;
+        font-size: inherit;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -0.125em;
+      }
+      .svg-inline--fa.fa-lg {
+        vertical-align: -0.225em;
+      }
+      .svg-inline--fa.fa-w-1 {
+        width: 0.0625em;
+      }
+      .svg-inline--fa.fa-w-2 {
+        width: 0.125em;
+      }
+      .svg-inline--fa.fa-w-3 {
+        width: 0.1875em;
+      }
+      .svg-inline--fa.fa-w-4 {
+        width: 0.25em;
+      }
+      .svg-inline--fa.fa-w-5 {
+        width: 0.3125em;
+      }
+      .svg-inline--fa.fa-w-6 {
+        width: 0.375em;
+      }
+      .svg-inline--fa.fa-w-7 {
+        width: 0.4375em;
+      }
+      .svg-inline--fa.fa-w-8 {
+        width: 0.5em;
+      }
+      .svg-inline--fa.fa-w-9 {
+        width: 0.5625em;
+      }
+      .svg-inline--fa.fa-w-10 {
+        width: 0.625em;
+      }
+      .svg-inline--fa.fa-w-11 {
+        width: 0.6875em;
+      }
+      .svg-inline--fa.fa-w-12 {
+        width: 0.75em;
+      }
+      .svg-inline--fa.fa-w-13 {
+        width: 0.8125em;
+      }
+      .svg-inline--fa.fa-w-14 {
+        width: 0.875em;
+      }
+      .svg-inline--fa.fa-w-15 {
+        width: 0.9375em;
+      }
+      .svg-inline--fa.fa-w-16 {
+        width: 1em;
+      }
+      .svg-inline--fa.fa-w-17 {
+        width: 1.0625em;
+      }
+      .svg-inline--fa.fa-w-18 {
+        width: 1.125em;
+      }
+      .svg-inline--fa.fa-w-19 {
+        width: 1.1875em;
+      }
+      .svg-inline--fa.fa-w-20 {
+        width: 1.25em;
+      }
+      .svg-inline--fa.fa-pull-left {
+        margin-right: 0.3em;
+        width: auto;
+      }
+      .svg-inline--fa.fa-pull-right {
+        margin-left: 0.3em;
+        width: auto;
+      }
+      .svg-inline--fa.fa-border {
+        height: 1.5em;
+      }
+      .svg-inline--fa.fa-li {
+        width: 2em;
+      }
+      .svg-inline--fa.fa-fw {
+        width: 1.25em;
+      }
+      .fa-layers svg.svg-inline--fa {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .fa-layers {
+        display: inline-block;
+        height: 1em;
+        position: relative;
+        text-align: center;
+        vertical-align: -0.125em;
+        width: 1em;
+      }
+      .fa-layers svg.svg-inline--fa {
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+      }
+      .fa-layers-counter,
+      .fa-layers-text {
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+      }
+      .fa-layers-text {
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+      }
+      .fa-layers-counter {
+        background-color: #ff253a;
+        border-radius: 1em;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #fff;
+        height: 1.5em;
+        line-height: 1;
+        max-width: 5em;
+        min-width: 1.5em;
+        overflow: hidden;
+        padding: 0.25em;
+        right: 0;
+        text-overflow: ellipsis;
+        top: 0;
+        -webkit-transform: scale(0.25);
+        transform: scale(0.25);
+        -webkit-transform-origin: top right;
+        transform-origin: top right;
+      }
+      .fa-layers-bottom-right {
+        bottom: 0;
+        right: 0;
+        top: auto;
+        -webkit-transform: scale(0.25);
+        transform: scale(0.25);
+        -webkit-transform-origin: bottom right;
+        transform-origin: bottom right;
+      }
+      .fa-layers-bottom-left {
+        bottom: 0;
+        left: 0;
+        right: auto;
+        top: auto;
+        -webkit-transform: scale(0.25);
+        transform: scale(0.25);
+        -webkit-transform-origin: bottom left;
+        transform-origin: bottom left;
+      }
+      .fa-layers-top-right {
+        right: 0;
+        top: 0;
+        -webkit-transform: scale(0.25);
+        transform: scale(0.25);
+        -webkit-transform-origin: top right;
+        transform-origin: top right;
+      }
+      .fa-layers-top-left {
+        left: 0;
+        right: auto;
+        top: 0;
+        -webkit-transform: scale(0.25);
+        transform: scale(0.25);
+        -webkit-transform-origin: top left;
+        transform-origin: top left;
+      }
+      .fa-lg {
+        font-size: 1.3333333333em;
+        line-height: 0.75em;
+        vertical-align: -0.0667em;
+      }
+      .fa-xs {
+        font-size: 0.75em;
+      }
+      .fa-sm {
+        font-size: 0.875em;
+      }
+      .fa-1x {
+        font-size: 1em;
+      }
+      .fa-2x {
+        font-size: 2em;
+      }
+      .fa-3x {
+        font-size: 3em;
+      }
+      .fa-4x {
+        font-size: 4em;
+      }
+      .fa-5x {
+        font-size: 5em;
+      }
+      .fa-6x {
+        font-size: 6em;
+      }
+      .fa-7x {
+        font-size: 7em;
+      }
+      .fa-8x {
+        font-size: 8em;
+      }
+      .fa-9x {
+        font-size: 9em;
+      }
+      .fa-10x {
+        font-size: 10em;
+      }
+      .fa-fw {
+        text-align: center;
+        width: 1.25em;
+      }
+      .fa-ul {
+        list-style-type: none;
+        margin-left: 2.5em;
+        padding-left: 0;
+      }
+      .fa-ul > li {
+        position: relative;
+      }
+      .fa-li {
+        left: -2em;
+        position: absolute;
+        text-align: center;
+        width: 2em;
+        line-height: inherit;
+      }
+      .fa-border {
+        border: solid 0.08em #eee;
+        border-radius: 0.1em;
+        padding: 0.2em 0.25em 0.15em;
+      }
+      .fa-pull-left {
+        float: left;
+      }
+      .fa-pull-right {
+        float: right;
+      }
+      .fa.fa-pull-left,
+      .fab.fa-pull-left,
+      .fal.fa-pull-left,
+      .far.fa-pull-left,
+      .fas.fa-pull-left {
+        margin-right: 0.3em;
+      }
+      .fa.fa-pull-right,
+      .fab.fa-pull-right,
+      .fal.fa-pull-right,
+      .far.fa-pull-right,
+      .fas.fa-pull-right {
+        margin-left: 0.3em;
+      }
+      .fa-spin {
+        -webkit-animation: fa-spin 2s infinite linear;
+        animation: fa-spin 2s infinite linear;
+      }
+      .fa-pulse {
+        -webkit-animation: fa-spin 1s infinite steps(8);
+        animation: fa-spin 1s infinite steps(8);
+      }
+      @-webkit-keyframes fa-spin {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes fa-spin {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      .fa-rotate-90 {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+      .fa-rotate-180 {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+      .fa-rotate-270 {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+      }
+      .fa-flip-horizontal {
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+      }
+      .fa-flip-vertical {
+        -webkit-transform: scale(1, -1);
+        transform: scale(1, -1);
+      }
+      .fa-flip-both,
+      .fa-flip-horizontal.fa-flip-vertical {
+        -webkit-transform: scale(-1, -1);
+        transform: scale(-1, -1);
+      }
+      :root .fa-flip-both,
+      :root .fa-flip-horizontal,
+      :root .fa-flip-vertical,
+      :root .fa-rotate-180,
+      :root .fa-rotate-270,
+      :root .fa-rotate-90 {
+        -webkit-filter: none;
+        filter: none;
+      }
+      .fa-stack {
+        display: inline-block;
+        height: 2em;
+        position: relative;
+        width: 2.5em;
+      }
+      .fa-stack-1x,
+      .fa-stack-2x {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .svg-inline--fa.fa-stack-1x {
+        height: 1em;
+        width: 1.25em;
+      }
+      .svg-inline--fa.fa-stack-2x {
+        height: 2em;
+        width: 2.5em;
+      }
+      .fa-inverse {
+        color: #fff;
+      }
+      .sr-only {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      .sr-only-focusable:active,
+      .sr-only-focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body class="">
+    <section id="home" class="pb-5">
+      <!-- top header -->
+      <div class="bg-dark">
+        <div
+          class="top-header py-2 px-3 container d-flex justify-content-between align-items-center"
+        >
+          <div class="top-header-left d-flex">
+            <div class="top-header-icons hstack gap-2 d-flex">
+              <div class="icon bg-primary">
+                <a href="#">
+                  <i class="bi text-light bi-facebook"></i>
+                </a>
+              </div>
+              <div class="icon bg-info">
+                <a href="#">
+                  <i class="bi text-light bi-twitter"></i>
+                </a>
+              </div>
+              <div class="icon bg-danger">
+                <a href="#">
+                  <i class="bi text-light bi-youtube"></i>
+                </a>
+              </div>
+              <div class="top-header-dat text-light">
+                <span class="mx-1">Thursday, 14 April, 2022 </span>
+                <span><i class="bi bi-clock-fill mx-1"></i> 13:13:04 BST</span>
+              </div>
+            </div>
+          </div>
+          <div class="top-header-right d-flex">
+            <a href="#">Skip to Main Content ></a>
+            <i class="bi bi-person-fill text-light mx-1 px-1 fs-5"></i>
+            <i class="bi text-light bi-translate px-1"></i>
+            <span class="text-light">বাংলা</span>
+          </div>
+        </div>
+      </div>
+      <header class="navigation">
+        <nav class="navbar navbar-dark container">
+          <div class="container-fluid ps-0">
+            <div class="logo">
+              <a
+                class="p-0 m-0 navbar-brand d-flex align-items-center"
+                href="/home"
+              >
+                <img src="/assets/images/logo.png" alt="logo" />
+                <span style="margin-left: -15px">খাদ্য বাতায়ন</span>
+              </a>
+            </div>
+
+            <div class="nav-right d-flex align-items-center">
+              <div
+                class="nav-icons text-light border-start border-end border-light px-3"
+              >
+                <i class="bi bi-card-text fs-5 px-1"></i>
+                <i class="bi bi-bell fs-5 px-1"></i>
+              </div>
+              <div class="search-login px-3">
+                <i class="bi bi-search me-2 fs-5 text-light"></i>
+                <button style="background: #386801" class="btn text-light">
+                  <i class="bi bi-person-fill"></i>
+                  login
+                </button>
+              </div>
+              <button
+                class="navbar-toggler px-1"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div
+              class="offcanvas offcanvas-end text-bg-dark"
+              tabindex="-1"
+              id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                  Dark offcanvas
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-dark active"
+                      aria-current="page"
+                      href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link text-dark dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="scss-p">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
+          culpa!
+        </p>
+      </div>
+      <div class="carousel-container">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                style="height: 70vh; object-fit: cover"
+                src="/assets/images/1.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                style="height: 70vh; object-fit: cover"
+                src="/assets/images/2.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                style="height: 70vh; object-fit: cover"
+                src="/assets/images/3.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev text-light p-2"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-success rounded-circle"
+              style="background-size: 18px"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-success rounded-circle"
+              style="background-size: 18px"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div
+        style="background-color: #346602"
+        class="text-light position-relative"
+      >
+        <div class="container d-flex">
+          <div
+            class="d-flex align-items-center"
+            style="background-color: #87c452"
+          >
+            <i class="bi bi-card-text fs-5 px-3"></i>
+          </div>
+          <div class="w-100 py-2">
+            <div
+              class="marquee d-flex align-items-center border-end border-light"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+                repellat fugiat quo alias facilis necessitatibus. Minima officia
+                nobis at, possimus itaque nemo et vitae quod nihil quo quaerat
+                natus ut eos reprehenderit sequi expedita sed dignissimos
+                explicabo consectetur doloremque veritatis blanditiis fugit
+                molestias incidunt! Eos esse ad odio maiores ullam harum
+                repellat earum libero? Labore eius voluptates sed impedit illum
+                excepturi nobis! Enim autem tempora minus modi natus commodi
+                repudiandae totam facere vitae, similique rem neque soluta
+                delectus reprehenderit asperiores quia consectetur placeat eos
+                maiores amet odit ad molestias nihil. Nobis amet dolore
+                consectetur ipsam, tempora quo quidem expedita inventore. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Magni
+                repellat fugiat quo alias facilis necessitatibus. Minima officia
+                nobis at, possimus itaque nemo et vitae quod nihil quo quaerat
+                natus ut eos reprehenderit sequi expedita sed dignissimos
+                explicabo consectetur doloremque veritatis blanditiis fugit
+                molestias incidunt! Eos esse ad odio maiores ullam harum
+                repellat earum libero? Labore eius voluptates sed impedit illum
+                excepturi nobis! Enim autem tempora minus modi natus commodi
+                repudiandae totam facere vitae, similique rem neque soluta
+                delectus reprehenderit asperiores quia consectetur placeat eos
+                maiores amet odit ad molestias nihil. Nobis amet dolore
+                consectetur ipsam, tempora quo quidem expedita inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="d-flex position-absolute time-icons">
+          <span>23 November, 2022</span>
+          <div>pre</div>
+          <div>next</div>
+        </div> -->
+      </div>
+      <div
+        class="accessability-icon position-fixed bg-success rounded-circle p-3 text-light d-flex justify-content-center align-items-center"
+      >
+        <i class="bi bi-universal-access-circle fs-3"></i>
+      </div>
+      <div class="portals d-flex justify-content-center align-items-center">
+        <div class="portals-left d-flex align-items-center">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="logo" srcset="" />
+          </div>
+          <div style="margin-left: -10px" class="text-light fs-5 lh-1">
+            <span>Our</span><br />
+            <span class="fw-bold">Portals</span>
+          </div>
+        </div>
+        <div class="portals-right">
+          <div class="gap-3 d-flex w-100 overflow-hidden portal-cards">
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-person fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">Dealer</h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-person fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">Miller</h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-credit-card fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">
+                  Cradit <br />
+                  Coustomer
+                </h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-person-square fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">
+                  Other Piority <br />
+                  Coustomer
+                </h6>
+              </div>
+            </div>
+            <div class="card" style="min-width: 9rem">
+              <div
+                class="card-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <i class="bi bi-truck fs-3 text-success px-3"></i>
+                <h6 class="card-title text-center fw-normal">
+                  Movment <br />
+                  Constactor
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="accessibilityBar" title="Accessibility Menu" class="active">
+      <button
+        id="universalAccessBtn"
+        type="button"
+        aria-label="accessibility menu"
+        accesskey="a"
+        class="collapsed"
+      >
+        <svg
+          class="svg-inline--fa fa-universal-access fa-w-16"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="universal-access"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M256 48c114.953 0 208 93.029 208 208 0 114.953-93.029 208-208 208-114.953 0-208-93.029-208-208 0-114.953 93.029-208 208-208m0-40C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 56C149.961 64 64 149.961 64 256s85.961 192 192 192 192-85.961 192-192S362.039 64 256 64zm0 44c19.882 0 36 16.118 36 36s-16.118 36-36 36-36-16.118-36-36 16.118-36 36-36zm117.741 98.023c-28.712 6.779-55.511 12.748-82.14 15.807.851 101.023 12.306 123.052 25.037 155.621 3.617 9.26-.957 19.698-10.217 23.315-9.261 3.617-19.699-.957-23.316-10.217-8.705-22.308-17.086-40.636-22.261-78.549h-9.686c-5.167 37.851-13.534 56.208-22.262 78.549-3.615 9.255-14.05 13.836-23.315 10.217-9.26-3.617-13.834-14.056-10.217-23.315 12.713-32.541 24.185-54.541 25.037-155.621-26.629-3.058-53.428-9.027-82.141-15.807-8.6-2.031-13.926-10.648-11.895-19.249s10.647-13.926 19.249-11.895c96.686 22.829 124.283 22.783 220.775 0 8.599-2.03 17.218 3.294 19.249 11.895 2.029 8.601-3.297 17.219-11.897 19.249z"
+          ></path></svg
+        ><!-- <i class="fas fa-universal-access"></i> --><span
+          >Accessibility</span
+        ></button
+      ><button
+        type="button"
+        aria-label="decrement font"
+        title="decrement font"
+        class="setAccessibility setAccessibility2"
+        data-accessibility="decFont"
+      >
+        <strong
+          ><span>A <sup>-</sup></span></strong
+        ></button
+      ><button
+        type="button"
+        aria-label="original font"
+        title="original font"
+        class="setAccessibility setAccessibility2"
+        data-accessibility="oriFont"
+      >
+        <strong
+          ><span>A <sup>o</sup></span></strong
+        ></button
+      ><button
+        type="button"
+        aria-label="increment font"
+        title="increment font"
+        class="setAccessibility setAccessibility2"
+        data-accessibility="incFont"
+      >
+        <strong
+          ><span>A <sup>+</sup></span></strong
+        ></button
+      ><button
+        type="button"
+        aria-label=" Monochrome"
+        title=" Monochrome"
+        class="setAccessibility undefined"
+        data-accessibility="contrast"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-tint fa-w-11"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="tint"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 352 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M205.22 22.09c-7.94-28.78-49.44-30.12-58.44 0C100.01 179.85 0 222.72 0 333.91 0 432.35 78.72 512 176 512s176-79.65 176-178.09c0-111.75-99.79-153.34-146.78-311.82zM176 448c-61.75 0-112-50.25-112-112 0-8.84 7.16-16 16-16s16 7.16 16 16c0 44.11 35.89 80 80 80 8.84 0 16 7.16 16 16s-7.16 16-16 16z"
+            ></path></svg
+          ><!-- <i class="fas fa-tint"></i> --></strong
+        >
+        Monochrome</button
+      ><button
+        type="button"
+        aria-label="Invert Colors"
+        title="Invert Colors"
+        class="setAccessibility undefined"
+        data-accessibility="dark"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-adjust fa-w-16"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="adjust"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+            ></path></svg
+          ><!-- <i class="fas fa-adjust"></i> --></strong
+        >Invert Colors</button
+      ><button
+        type="button"
+        aria-label="Big Cursor"
+        title="Big Cursor"
+        class="setAccessibility undefined"
+        data-accessibility="bcursor"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-mouse-pointer fa-w-10"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="mouse-pointer"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M302.189 329.126H196.105l55.831 135.993c3.889 9.428-.555 19.999-9.444 23.999l-49.165 21.427c-9.165 4-19.443-.571-23.332-9.714l-53.053-129.136-86.664 89.138C18.729 472.71 0 463.554 0 447.977V18.299C0 1.899 19.921-6.096 30.277 5.443l284.412 292.542c11.472 11.179 3.007 31.141-12.5 31.141z"
+            ></path></svg
+          ><!-- <i class="fas fa-mouse-pointer"></i> --></strong
+        >Big Cursor</button
+      ><button
+        type="button"
+        aria-label="Highlight Links"
+        title="Highlight Links"
+        class="setAccessibility undefined"
+        data-accessibility="highlink"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-link fa-w-16"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="link"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"
+            ></path></svg
+          ><!-- <i class="fas fa-link"></i> --></strong
+        >Highlight Links</button
+      ><button
+        type="button"
+        aria-label="Show Headings"
+        title="Show Headings"
+        class="setAccessibility undefined"
+        data-accessibility="heading"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-heading fa-w-16"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="heading"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M448 96v320h32a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H320a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h32V288H160v128h32a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H32a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h32V96H32a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h160a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16h-32v128h192V96h-32a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h160a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16z"
+            ></path></svg
+          ><!-- <i class="fas fa-heading"></i> --></strong
+        >Show Headings</button
+      ><button
+        type="button"
+        aria-label="Reading Guide"
+        title="Reading Guide"
+        class="setAccessibility undefined"
+        data-accessibility="readingLine"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-book-open fa-w-18"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="book-open"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z"
+            ></path></svg
+          ><!-- <i class="fas fa-book-open"></i> --></strong
+        >Reading Guide</button
+      ><button
+        type="button"
+        aria-label="Reset"
+        title="Reset"
+        class="setAccessibility undefined"
+        data-accessibility="reset"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-redo-alt fa-w-16"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="redo-alt"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M256.455 8c66.269.119 126.437 26.233 170.859 68.685l35.715-35.715C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.75c-30.864-28.899-70.801-44.907-113.23-45.273-92.398-.798-170.283 73.977-169.484 169.442C88.764 348.009 162.184 424 256 424c41.127 0 79.997-14.678 110.629-41.556 4.743-4.161 11.906-3.908 16.368.553l39.662 39.662c4.872 4.872 4.631 12.815-.482 17.433C378.202 479.813 319.926 504 256 504 119.034 504 8.001 392.967 8 256.002 7.999 119.193 119.646 7.755 256.455 8z"
+            ></path></svg
+          ><!-- <i class="fas fa-redo-alt"></i> --></strong
+        >Reset</button
+      ><button
+        type="button"
+        aria-label="keyboard Shortcut"
+        title="keyboard Shortcut"
+        class="setAccessibility undefined"
+        data-accessibility="keyboard"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-keyboard fa-w-18"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="keyboard"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M528 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM128 180v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm288 0v-40c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h232c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12z"
+            ></path></svg
+          ><!-- <i class="fas fa-keyboard"></i> --></strong
+        >Keyboard Shortcut</button
+      ><button
+        type="button"
+        aria-label="Download Screen Reader"
+        title="Download Screen Reader"
+        class="setAccessibility undefined"
+        data-accessibility="download"
+      >
+        <strong
+          ><svg
+            class="svg-inline--fa fa-download fa-w-16"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="download"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+            ></path></svg
+          ><!-- <i class="fas fa-download"></i> --></strong
+        >Download Screen Reader
+      </button>
+    </div>
+  </body>
+</html>
