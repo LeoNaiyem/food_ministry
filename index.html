@@ -16,21 +16,14 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="/accessablitiy/css/style.css" />
-    <link rel="stylesheet" href="/accessablitiy/scss/index.css.map" />
     <link rel="stylesheet" href="/accessablitiy/css/accessibility.css" />
     <link rel="stylesheet" href="/accessablitiy/css/accessibility2.css" />
-    <link rel="stylesheet" href="/accessablitiy/css/asb.css" />
-    <link rel="stylesheet" href="/accessablitiy/scss/_mixnis.css" />
-    <link rel="stylesheet" href="/accessablitiy/scss/_variables.css" />
-    <link rel="stylesheet" href="/accessablitiy/scss/accessibilities.css" />
-    <link rel="stylesheet" href="/accessablitiy/scss/markerLine.css" />
-    <link rel="stylesheet" href="/accessablitiy/scss/readingLine.css" />
     <script src="/accessablitiy/js/index.js"></script>
-    <script src="/accessablitiy/js/asb.js"></script>
     <script
       type="text/javascript"
       src="/accessablitiy/js/jquery-accessibleMegaMenu.js"
     ></script>
+    <script src="/accessablitiy/js/asb.js"></script>
     <script>
       document.addEventListener("keyup", (event) => {
         //var name = event.key; //var code = event.code;
@@ -97,7 +90,14 @@
         $("#start-np").attr({ "aria-selected": true, tabindex: 0 });
         document.getElementById("start-np").focus();
       }
+      start_np();
     </script>
+    <style>
+      .btn-for-accessibility {
+        font-size: 13px;
+        background: local;
+      }
+    </style>
     <style type="text/css">
       * {
         margin: 0;
@@ -581,7 +581,9 @@
       }
     </style>
   </head>
-  <body class="">
+  <body class="accessibility_readingLine">
+    <div id="markerLine"></div>
+    <div id="readingLine" style="top: 200px"></div>
     <section id="home" class="pb-5">
       <!-- top header -->
       <div class="bg-dark">
@@ -726,12 +728,6 @@
           </div>
         </nav>
       </header>
-      <div class="scss-p">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
-          culpa!
-        </p>
-      </div>
       <div class="carousel-container">
         <div
           id="carouselExampleControls"

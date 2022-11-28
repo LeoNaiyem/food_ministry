@@ -143,7 +143,7 @@ $(document).ready(function () {
         /**
          * Creating the bar
          */
-
+        console.log('from accessibility')
         const accessibilityBar = document.createElement("div");
         accessibilityBar.id = "accessibilityBar";
         accessibilityBar.tabindex = "0"

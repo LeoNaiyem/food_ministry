@@ -23,6 +23,7 @@
     // Reset defaults
     outline: none !important;
     box-shadow: none !important;
+    -webkit-appearance: none;
     cursor: pointer;
 
     &#universalAccessBtn {
@@ -134,10 +135,10 @@
   }
 }
 /*
-      === === === === === === === === === === === === === === === === === ===
-      === === === === === === Activating Buttons  === === === === === === ===
-      === === === === === === === === === === === === === === === === === ===
-      */
+	=== === === === === === === === === === === === === === === === === ===
+	=== === === === === === Activating Buttons  === === === === === === ===
+	=== === === === === === === === === === === === === === === === === ===
+	*/
 body {
   &.contrast {
     #accessibilityBar {

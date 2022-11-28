@@ -1,0 +1,28 @@
+/*
+	=== === === === === === === === === === === === === === === === === ===
+	=== === === === === === === readingLine === === === === === === === ===
+	=== === === === === === === === === === === === === === === === === ===
+	*/
+body.accessibility_markerLine #markerLine {
+  background-color: rgb(205, 212, 137) !important;
+  opacity: 0.75;
+  border-width: 0.1px 0;
+  border-style: solid;
+  border-color: #c5cd76;
+  width: 100vw;
+  height: 1.75rem;
+  position: absolute;
+  left: 0;
+  z-index: 9999;
+  transform: translateY(-1rem);
+  mix-blend-mode: color;
+}
+body.accessibility_markerLine.contrast #markerLine {
+  mix-blend-mode: multiply;
+  opacity: 1;
+}
+body.accessibility_markerLine.darkmode #markerLine {
+  opacity: 0.25;
+  background: #655b5b !important;
+  mix-blend-mode: unset;
+}/*# sourceMappingURL=markerLine.css.map */
