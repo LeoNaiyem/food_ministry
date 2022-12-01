@@ -16,7 +16,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -26,7 +29,7 @@
       .green-text {
         color: #5bb600;
       }
-      .navigation {
+      .green-bg {
         background-color: #5bb600;
       }
       .logo {
@@ -37,17 +40,39 @@
         width: 100%;
         height: 100%;
       }
+      .prog-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .prog-hr {
+        height: 3px;
+        width: 30%;
+        margin-left: -3px;
+        background-color: #3b3535;
+      }
+      .pro-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border: 2px solid black;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
     <section id="register" class="pb-5">
-      <header class="navigation">
+      <header class="green-bg">
         <nav class="navbar navbar-dark px-5">
           <div class="container-fluid ps-0">
             <div class="logo">
               <a
                 class="p-0 m-0 navbar-brand d-flex align-items-center"
-                href="#"
+                href="/home"
               >
                 <img src="/assets/images/logo.png" alt="logo" />
                 <span style="margin-left: -15px">খাদ্য বাতায়ন</span>
@@ -67,37 +92,42 @@
         </nav>
       </header>
       <main class="px-5">
-        <hr class="mt-3 mb-1" />
-        <span class="fs-5 fw-bold p-0 m-0">
-          Movement Contactor Landing Page
-        </span>
-        <hr class="mt-1 mb-3" />
-        <div class="container pt-3">
-          <div class="row gy-5">
-            <div class="col-7 h-75">
-              <div class="card py-3 px-5">
-                <span class="fs-6 fw-bold green-text">
-                  Movement Contactor Registration Guidelines
-                </span>
-                <div class="text-success mb-2">
-                  <hr class="mt-0" />
-                </div>
-                <div class="card py-2 px-3">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorum, pariatur possimus, facere quo similique enim
-                    eligendi dolores at assumenda provident perspiciatis
-                    consectetur vel repudiandae, rerum sunt. Deleniti, tempore.
-                    Asperiores fuga quod et dolorum reiciendis! Nihil iure odit
-                    fuga obcaecati aliquam totam quidem autem cum! Enim ratione
-                    reprehenderit alias neque ipsum?
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-5">
-              <div class="card"></div>
-            </div>
+        <button
+          class="btn btn-primary d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasResponsive"
+          aria-controls="offcanvasResponsive"
+        >
+          Toggle offcanvas
+        </button>
+
+        <div class="alert alert-info d-none d-lg-block">
+          Resize your browser to show the responsive offcanvas toggle.
+        </div>
+
+        <div
+          class="offcanvas-lg offcanvas-end"
+          tabindex="-1"
+          id="offcanvasResponsive"
+          aria-labelledby="offcanvasResponsiveLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">
+              Responsive offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#offcanvasResponsive"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <p class="mb-0">
+              This is content within an <code>.offcanvas-lg</code>.
+            </p>
           </div>
         </div>
       </main>
