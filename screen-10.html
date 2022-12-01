@@ -180,16 +180,24 @@
             <h6 class="green-text fw-bold mb-2">Search Filter</h6>
             <div class="d-flex align-items-center gap-2">
               <div class="flex-grow-1">
-                <h6 class="mb-1">Date From</h6>
-                <input class="py-1 px-2 w-100" type="date" />
+                <label class="fw-bold text14 mb-1" for="dateFrom"
+                  >Date From
+                </label>
+                <input class="py-1 px-2 w-100" type="date" id="dateFrom" />
               </div>
               <div class="flex-grow-1">
-                <h6 class="mb-1">Date To</h6>
-                <input class="py-1 px-2 w-100" class="py-1 px-2" type="date" />
+                <label class="fw-bold text14 mb-1" for="dateTo">Date To</label>
+                <input
+                  class="py-1 px-2 w-100"
+                  class="py-1 px-2"
+                  type="date"
+                  id="dateTo"
+                />
               </div>
               <div class="flex-grow-1">
-                <h6 class="mb-1">Union</h6>
+                <label class="fw-bold text14 mb-1" for="union">Union</label>
                 <select
+                  id="union"
                   class="form-select w-100"
                   aria-label="Default select example"
                 >
@@ -200,8 +208,9 @@
                 </select>
               </div>
               <div class="flex-grow-1">
-                <h6 class="mb-1">Status</h6>
+                <label class="fw-bold text14 mb-1" for="status">Status</label>
                 <select
+                  id="status"
                   class="form-select w-100"
                   aria-label="Default select example"
                 >
