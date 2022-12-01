@@ -26,112 +26,129 @@
         padding: 0;
         box-sizing: border-box;
       }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
       .green-text {
         color: #5bb600;
       }
       .green-bg {
         background-color: #5bb600;
       }
+      .text14 {
+        font-size: 14px;
+      }
       .logo {
-        width: 80px;
+        width: 180px;
         height: auto;
       }
       .logo img {
         width: 100%;
         height: 100%;
       }
-      .prog-circle {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        z-index: 2;
+      main {
+        width: 100%;
+        height: 100vh;
+        background-image: url(assets/images/dhan_khet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
       }
-      .prog-hr {
-        height: 3px;
-        width: 30%;
-        margin-left: -3px;
-        background-color: #3b3535;
+      main::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.6);
       }
-      .pro-circle {
+      .logo-text {
+        margin-left: -30px;
+      }
+      .custom-card {
+        width: 35%;
+      }
+      .custom-input {
         display: flex;
+        border: 2px solid #bfd5b6;
+        color: #6acf06;
+        border-radius: 5px;
         justify-content: center;
         align-items: center;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        border: 2px solid black;
-        margin-top: 20px;
+        padding: 0 10px;
+      }
+      .custom-input input {
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: transparent;
       }
     </style>
   </head>
   <body>
-    <section id="register" class="pb-5">
-      <header class="green-bg">
-        <nav class="navbar navbar-dark px-5">
-          <div class="container-fluid ps-0">
-            <div class="logo">
-              <a
-                class="p-0 m-0 navbar-brand d-flex align-items-center"
-                href="/home"
-              >
-                <img src="/assets/images/logo.png" alt="logo" />
-                <span style="margin-left: -15px">খাদ্য বাতায়ন</span>
-              </a>
-            </div>
-            <div class="nav-right d-flex align-items-center gap-3">
-              <button style="background: #386801" class="btn text-light">
-                <i class="bi bi-person-fill"></i>
-                login
-              </button>
-              <div class="d-flex align-items-center">
-                <i class="bi text-light bi-translate px-1"></i>
-                <span class="text-light">বাংলা</span>
-              </div>
+    <main class="d-flex flex-column justify-content-center align-items-center">
+      <div class="d-flex align-items-center position-relative">
+        <div class="logo">
+          <img src="assets/images//logo.png" alt="logo" />
+        </div>
+        <h4 class="fw-bold logo-text text-light">খাদ্য বাতায়ন</h4>
+      </div>
+      <div class="card custom-card shadow-lg p-5 mt-4">
+        <h4 class="text-center green-text fw-bold">Login</h4>
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-12">
+            <label for="validationCustom01" class="form-label fw-bold text14"
+              >NID <sup class="text-danger">*</sup></label
+            >
+            <div class="custom-input">
+              <i class="bi bi-person fs-4"></i>
+              <input class="ps-2" type="number" />
             </div>
           </div>
-        </nav>
-      </header>
-      <main class="px-5">
-        <button
-          class="btn btn-primary d-lg-none"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasResponsive"
-          aria-controls="offcanvasResponsive"
-        >
-          Toggle offcanvas
-        </button>
-
-        <div class="alert alert-info d-none d-lg-block">
-          Resize your browser to show the responsive offcanvas toggle.
-        </div>
-
-        <div
-          class="offcanvas-lg offcanvas-end"
-          tabindex="-1"
-          id="offcanvasResponsive"
-          aria-labelledby="offcanvasResponsiveLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">
-              Responsive offcanvas
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              data-bs-target="#offcanvasResponsive"
-              aria-label="Close"
-            ></button>
+          <div class="col-md-12">
+            <label for="validationCustom02" class="form-label fw-bold text14"
+              >Password<sup>*</sup></label
+            >
+            <div class="custom-input">
+              <i class="bi bi-lock fs-4"></i>
+              <input class="ps-2" type="password" />
+            </div>
           </div>
-          <div class="offcanvas-body">
-            <p class="mb-0">
-              This is content within an <code>.offcanvas-lg</code>.
-            </p>
+          <div class="col-12 d-flex justify-content-between">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label text14 fw-bold" for="invalidCheck">
+                Remember me
+              </label>
+            </div>
+            <a class="text-decoration-none green-text fw-bold text14" href="#"
+              >Forgot Password?</a
+            >
           </div>
-        </div>
-      </main>
-    </section>
+          <div class="col-12">
+            <button class="btn green-bg text-light w-100" type="submit">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
 
     <!-- Bootstrap JavaScript CDN-->
     <script
