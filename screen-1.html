@@ -89,22 +89,6 @@
         -webkit-animation: scroll-left 20s linear infinite;
         animation: scroll-left 20s linear infinite;
       }
-      /* .time-icons {
-        top: 5px;
-        right: 115px;
-      } */
-      .accessability-icon {
-        width: 60px;
-        height: 60px;
-        top: 80vh;
-        right: 20px;
-        cursor: pointer;
-        z-index: 999999;
-        transition: all 0.5s ease;
-      }
-      .accessability-icon:hover {
-        transform: rotate(360deg);
-      }
       .portals-left {
         -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
@@ -142,16 +126,23 @@
         top: 10px;
         right: 30px;
       }
+      .icon-show-hide.active ~ i {
+        display: none;
+      }
       .icon-show-hide i {
         color: green;
       }
-      .portal-card.active .hide-icon {
+      .show-icon {
         display: none;
         pointer-events: none;
       }
-
-      .portal-card.active .portal-card-icon {
+      .icon-show-hide.active .show-icon {
+        display: block;
+        pointer-events: initial;
+      }
+      .icon-show-hide.active .hide-icon {
         display: none;
+        pointer-events: none;
       }
 
       @-moz-keyframes scroll-left {
@@ -600,7 +591,6 @@
 
       for (var i = 0; i < showHide.length; i++) {
         showHide[i].addEventListener("click", myFunction, false);
-        console.log(showHide[i]);
       }
     </script>
   </body>
