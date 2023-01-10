@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDM FDD</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .green-text {
+        color: #5bb600;
+      }
+      .green-bg {
+        background-color: #5bb600;
+      }
+      .logo {
+        width: 80px;
+        height: auto;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+      .prog-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .prog-hr {
+        height: 3px;
+        width: 30%;
+        margin-left: -3px;
+        background-color: #3b3535;
+      }
+      tr > td > span {
+        padding-left: 2.5rem;
+        font-weight: 600;
+      }
+      .captcha {
+        width: 120px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="register" class="pb-5">
+      <header class="green-bg">
+        <nav class="navbar navbar-dark px-5">
+          <div class="container-fluid ps-0">
+            <div class="logo">
+              <a
+                class="p-0 m-0 navbar-brand d-flex align-items-center"
+                href="/home"
+              >
+                <img src="/assets/images/logo.png" alt="logo" />
+                <span style="margin-left: -15px">খাদ্য বাতায়ন</span>
+              </a>
+            </div>
+            <div class="nav-right d-flex align-items-center gap-3">
+              <button style="background: #386801" class="btn text-light">
+                <i class="bi bi-person-fill"></i>
+                login
+              </button>
+              <div class="d-flex align-items-center">
+                <i class="bi text-light bi-translate px-1"></i>
+                <span class="text-light">বাংলা</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="px-5">
+        <hr class="mt-3 mb-1" />
+        <span class="fs-5 fw-bold p-0 m-0">
+          Food Grain License Registration
+        </span>
+        <hr class="mt-1 mb-3" />
+        <div
+          class="progress d-flex align-items-center bg-body w-50 h-100 m-auto my-2"
+        >
+          <div
+            class="prog-circle bg-dark"
+            role="progressbar"
+            aria-valuenow="15"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            class="prog-hr"
+            role="progressbar"
+            aria-valuenow="30"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            class="prog-circle bg-dark"
+            role="progressbar"
+            aria-valuenow="20"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            class="prog-hr"
+            role="progressbar"
+            aria-valuenow="30"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            class="prog-circle bg-dark"
+            role="progressbar"
+            aria-valuenow="20"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            class="prog-hr bg-secondary"
+            role="progressbar"
+            aria-valuenow="30"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            class="prog-circle bg-secondary"
+            role="progressbar"
+            aria-valuenow="20"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="container w-75 m-auto">
+          <h5 class="green-text text-center fw-bolder mb-3">Form Preview</h5>
+          <div class="card py-4 px-5">
+            <div class="form_header text-center">
+              <span class="m-0 p-0 fw-bold">Food Grain License Form-B</span>
+              <h6 class="m-0 p-0 fw-bold">Original Copy</h6>
+              <h5 class="m-0 p-0 fw-bold green-text">
+                Government of People's Republic of Bangladesh
+              </h5>
+              <h6 class="m-0 p-0 fw-bold">
+                Ministry of Food And Disaster Management
+              </h6>
+              <span class="m-0 p-0 fw-bold">
+                Food Division Department of Food, Dhaka
+              </span>
+              <h6 class="text-uppercase fw-bold pb-3">
+                License for trading and warehousing of food grain/food items
+              </h6>
+            </div>
+            <h5 class="green-text mb-0">Basic Info</h5>
+            <div class="green-bg">
+              <hr class="mt-0 mb-0" />
+            </div>
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="green-text fw-bold mb-0">Trade License Info</h5>
+            <div class="green-bg">
+              <hr class="mt-0 mb-0" />
+            </div>
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row gy-5">
+              <div class="col-6">
+                <h5 class="green-text fw-bold mb-0">Address</h5>
+                <div class="green-bg">
+                  <hr class="mt-0 mb-0" />
+                </div>
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-6">
+                <h5 class="green-text fw-bold mb-0">Registered Address</h5>
+                <div class="green-bg">
+                  <hr class="mt-0 mb-0" />
+                </div>
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>:<span>user information</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <h5 class="green-text fw-bold mb-0">Uploaded Documents</h5>
+            <div class="green-bg">
+              <hr class="mt-0 mb-0" />
+            </div>
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                  <td>Mark</td>
+                  <td>:<span>user information</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr />
+            <input
+              type="checkbox"
+              aria-label="Checkbox for following text input"
+            />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tenetur
+            sint error velit. Dolor, repudiandae! .
+            <div class="captcha bg-secondary mt-2"></div>
+            <div class="mt-3">
+              <button class="btn btn-secondary me-2">
+                <i class="fa-solid fa-circle-arrow-left"></i> Back
+              </button>
+              <button class="btn btn-success green-bg">
+                Submit <i class="fa-solid fa-circle-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- Bootstrap JavaScript CDN-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
