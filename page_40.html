@@ -183,45 +183,88 @@
               <hr class="mt-0 mb-0" />
             </div>
 
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Name of the Applicant<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
+            <form action="">
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Name of the Applicant<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Father's Name<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
               </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Father's Name<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Mother's Name<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Gender<sup class="text-danger">*</sup></span
+                  >
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Male</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Female</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio3"
+                      value="option3"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Third Gender</label
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
+              <div class="mt-2 mb-3">
                 <span class="d-block"
-                  >Mother's Name<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Gender<sup class="text-danger">*</sup></span
+                  >Marital Status<sup class="text-danger">*</sup></span
                 >
                 <div class="form-check form-check-inline">
                   <input
@@ -232,7 +275,7 @@
                     value="option1"
                   />
                   <label class="form-check-label" for="inlineRadio1"
-                    >Male</label
+                    >Unmarried</label
                   >
                 </div>
                 <div class="form-check form-check-inline">
@@ -244,7 +287,7 @@
                     value="option2"
                   />
                   <label class="form-check-label" for="inlineRadio2"
-                    >Female</label
+                    >Married</label
                   >
                 </div>
                 <div class="form-check form-check-inline">
@@ -256,154 +299,289 @@
                     value="option3"
                   />
                   <label class="form-check-label" for="inlineRadio2"
-                    >Third Gender</label
+                    >Divorced</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio4"
+                    value="option4"
+                  />
+                  <label class="form-check-label" for="inlineRadio2"
+                    >Widow</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio5"
+                    value="option5"
+                  />
+                  <label class="form-check-label" for="inlineRadio2"
+                    >Widower</label
                   >
                 </div>
               </div>
-            </div>
-            <div class="mt-2 mb-3">
-              <span class="d-block"
-                >Marital Status<sup class="text-danger">*</sup></span
-              >
-              <div class="form-check form-check-inline">
+              <h5 class="green-text fw-bold mb-0">Permanent Address</h5>
+              <div class="green-bg mb-2">
+                <hr class="mt-0 mb-0" />
+              </div>
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Region / Division<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >District / Zilla<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Upazila<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Union<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Village / Mohalla<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Ward<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+              </div>
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Zip Code / Post Code<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Post Office<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+              </div>
+              <div class="mt-2 mb-3">
+                <span class="d-block"
+                  >House Address (House No / Flat No. / Plot No. / Landmark)<sup
+                    class="text-danger"
+                    >*</sup
+                  ></span
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Auto Populate"
+                  aria-label="default input example"
+                />
+              </div>
+              <h5 class="green-text fw-bold mb-0">Present Address</h5>
+              <div class="green-bg">
+                <hr class="mt-0 mb-0" />
+              </div>
+              <div class="form-check mt-3 mb-2">
                 <input
                   class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="option1"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
                 />
-                <label class="form-check-label" for="inlineRadio1"
-                  >Unmarried</label
-                >
+                <label class="form-check-label" for="flexCheckDefault">
+                  Same as Permanent Address
+                </label>
               </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="option2"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Married</label
-                >
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Region / Division<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >District / Zilla<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio3"
-                  value="option3"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Divorced</label
-                >
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Upazila<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Union<sup class="text-danger">*</sup></span
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Auto Populate</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio4"
-                  value="option4"
-                />
-                <label class="form-check-label" for="inlineRadio2">Widow</label>
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Village / Mohalla<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Ward<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
               </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio5"
-                  value="option5"
-                />
-                <label class="form-check-label" for="inlineRadio2"
-                  >Widower</label
-                >
+              <div class="row gx-4 mt-2">
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Zip Code / Post Code<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <span class="d-block"
+                    >Post Office<sup class="text-danger">*</sup></span
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Auto Populate"
+                    aria-label="default input example"
+                  />
+                </div>
               </div>
-            </div>
-            <h5 class="green-text fw-bold mb-0">Permanent Address</h5>
-            <div class="green-bg mb-2">
-              <hr class="mt-0 mb-0" />
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
+              <div class="mt-2 mb-3">
                 <span class="d-block"
-                  >Region / Division<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >District / Zilla<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Upazila<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Union<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Village / Mohalla<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Ward<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
-              </div>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Zip Code / Post Code<sup class="text-danger">*</sup></span
+                  >House Address (House No / Flat No. / Plot No. / Landmark)<sup
+                    class="text-danger"
+                    >*</sup
+                  ></span
                 >
                 <input
                   class="form-control"
@@ -412,165 +590,15 @@
                   aria-label="default input example"
                 />
               </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Post Office<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
+              <div>
+                <button class="btn btn-secondary me-2">
+                  <i class="fa-solid fa-circle-arrow-left"></i> Back
+                </button>
+                <button class="btn btn-success green-bg">
+                  Submit <i class="fa-solid fa-circle-arrow-right"></i>
+                </button>
               </div>
-            </div>
-            <div class="mt-2 mb-3">
-              <span class="d-block"
-                >House Address (House No / Flat No. / Plot No. / Landmark)<sup
-                  class="text-danger"
-                  >*</sup
-                ></span
-              >
-              <input
-                class="form-control"
-                type="text"
-                placeholder="Auto Populate"
-                aria-label="default input example"
-              />
-            </div>
-            <h5 class="green-text fw-bold mb-0">Present Address</h5>
-            <div class="green-bg">
-              <hr class="mt-0 mb-0" />
-            </div>
-            <div class="form-check mt-3 mb-2">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label class="form-check-label" for="flexCheckDefault">
-                Same as Permanent Address
-              </label>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Region / Division<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >District / Zilla<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Upazila<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Union<sup class="text-danger">*</sup></span
-                >
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Auto Populate</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Village / Mohalla<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Ward<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
-              </div>
-            </div>
-            <div class="row gx-4 mt-2">
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Zip Code / Post Code<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <span class="d-block"
-                  >Post Office<sup class="text-danger">*</sup></span
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="Auto Populate"
-                  aria-label="default input example"
-                />
-              </div>
-            </div>
-            <div class="mt-2 mb-3">
-              <span class="d-block"
-                >House Address (House No / Flat No. / Plot No. / Landmark)<sup
-                  class="text-danger"
-                  >*</sup
-                ></span
-              >
-              <input
-                class="form-control"
-                type="text"
-                placeholder="Auto Populate"
-                aria-label="default input example"
-              />
-            </div>
-            <div>
-              <button class="btn btn-secondary me-2">
-                <i class="fa-solid fa-circle-arrow-left"></i> Back
-              </button>
-              <button class="btn btn-success green-bg">
-                Submit <i class="fa-solid fa-circle-arrow-right"></i>
-              </button>
-            </div>
+            </form>
           </div>
         </div>
       </main>
