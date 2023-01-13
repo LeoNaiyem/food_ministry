@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DG Food</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .green-text {
+        color: #5bb600;
+      }
+      .green-bg {
+        background-color: #61c002;
+      }
+      .logo {
+        width: 80px;
+        height: auto;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+      }
+      .dashboard-left {
+        width: 15%;
+        background-color: #f1f1f1;
+        margin-right: 20px;
+        border-radius: 5px 5px 0 0;
+        height: calc(100vh - 48px);
+        position: fixed;
+        overflow: auto;
+      }
+      .dashboard-left a {
+        display: block;
+        color: black;
+        font-style: 14px;
+        font-weight: 500;
+        padding: 5px 16px;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
+
+      .dashboard-left a.active {
+        color: black;
+        background-color: #c8c8c8;
+      }
+
+      .dashboard-left a:hover:not(.active) {
+        background-color: #c8c8c8;
+        color: black;
+      }
+      .dashboard-right {
+        width: 85%;
+        margin-left: 18%;
+      }
+
+      main {
+        padding: 0 30px;
+        display: flex;
+      }
+      .text14 {
+        font-size: 14px;
+      }
+      .h-icon-circle {
+        width: 40px;
+        height: 40px;
+        background-color: #7cc533;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .h-icon-circle i > span {
+        font-size: 8px;
+        top: 15px;
+        margin-left: -10px;
+      }
+      .form-control,
+      .form-select {
+        background-color: #f5f3f3;
+        margin: 5px 0 10px 0;
+        transition: all 0.5s linear;
+      }
+      .form-control:focus,
+      .form-select:focus {
+        box-shadow: none;
+        background-color: #edffee;
+        border: 1px solid #5bb600;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="register">
+      <header style="z-index: 100" class="green-bg position-fixed top-0 w-100">
+        <nav class="navbar navbar-dark px-5">
+          <div class="container-fluid ps-0">
+            <div class="logo">
+              <a
+                class="p-0 m-0 navbar-brand d-flex align-items-center"
+                href="#"
+              >
+                <img src="/assets/images/logo.png" alt="logo" />
+                <span style="margin-left: -15px">খাদ্য বাতায়ন</span>
+              </a>
+            </div>
+            <div class="nav-right d-flex align-items-center gap-3">
+              <div class="d-flex">
+                <div
+                  class="h-icon-circle d-flex justify-content-center align-items-center rounded-circle position-relative text-light"
+                >
+                  <i class="bi bi-bell fs-5">
+                    <span
+                      class="position-absolute start-100 translate-middle badge rounded-circle text-dark bg-light"
+                    >
+                      2
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </i>
+                </div>
+                <div
+                  class="h-icon-circle d-flex justify-content-center align-items-center text-light rounded-circle"
+                >
+                  <i class="bi bi-person fs-5"></i>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn border-0 text-light text14 dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    DCF Name
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bi text-light bi-translate px-1"></i>
+                <span class="text-light">বাংলা</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="mt-5 pt-5">
+        <div class="dashboard-left py-5">
+          <h5 class="fw-bold ps-3 pb-2">Dashboard</h5>
+          <a href="#home">Food Grain License</a>
+          <a href="#news">Milling License</a>
+          <a href="#contact">Dealer List</a>
+          <a href="#about">Miller List</a>
+          <a class="active" href="#about">Movement Contactor</a>
+          <a href="#about">My Profile</a>
+          <a href="#about">Change Password</a>
+          <a href="#about">Logout</a>
+        </div>
+        <div class="dashboard-right">
+          <hr class="mt-0 mb-1" />
+          <div class="d-flex justify-content-between">
+            <span class="fs-6 fw-bold p-0 m-0">
+              Food Grain License Renewal
+            </span>
+            <span class="fs-6 fw-bold p-0 m-0">
+              Last login: <span>31 Aug 2021 | 14:30</span>
+            </span>
+          </div>
+          <hr class="mt-1 mb-3" />
+
+          <form action="" class="mt-4">
+            <div class="row gx-4 mt-2">
+              <div class="col-md-6 col-sm-12">
+                <span class="d-block fw-bold">License No.</span>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Auto Populate"
+                  aria-label="default input example"
+                />
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <span class="d-block fw-bold">License Expiry Date</span>
+                <input
+                  class="form-control"
+                  type="date"
+                  placeholder="Auto Populate"
+                  aria-label="default input example"
+                />
+              </div>
+            </div>
+            <div class="row gx-4 mt-2">
+              <div class="col-md-6 col-sm-12">
+                <span class="d-block fw-bold"
+                  >Tread License Number<sup class="text-danger">*</sup></span
+                >
+                <input
+                  class="form-control"
+                  type="number"
+                  placeholder="Auto Populate"
+                  aria-label="default input example"
+                />
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <span class="d-block fw-bold"
+                  >Tread License Expiry Date<sup class="text-danger"
+                    >*</sup
+                  ></span
+                >
+                <input
+                  class="form-control"
+                  type="date"
+                  placeholder="Auto Populate"
+                  aria-label="default input example"
+                />
+              </div>
+            </div>
+            <div class="row gx-4 mt-2">
+              <div class="col-md-6 col-sm-12">
+                <span class="d-block fw-bold"
+                  >Tread License Document<sup class="text-danger">*</sup></span
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  placeholder="Auto Populate"
+                  aria-label="default input example"
+                />
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <span class="d-block fw-bold">Payment Details</span>
+                <input
+                  class="form-control"
+                  type="file"
+                  placeholder="Auto Populate"
+                  aria-label="default input example"
+                />
+              </div>
+            </div>
+            <p style="margin-top: -10px; font-size: 14px">
+              <small
+                >Only PDF, DOC, DOCX format are allowed. Max file size can be
+                200KB.</small
+              >
+            </p>
+            <div class="mt-4">
+              <label for="exampleFormControlTextarea1" class="form-label m-0"
+                >Example textarea</label
+              >
+              <textarea
+                class="form-control card shadow-sm"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-success green-bg border-0 mt-3"
+            >
+              Submit <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </main>
+    </section>
+
+    <!-- Bootstrap JavaScript CDN-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
